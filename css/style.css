@@ -1,0 +1,275 @@
+:root {
+    --color-body: #c1bdba;
+    --color-success: #2ecc72;
+    --color-error: #e75c4c;
+    --color-form: #a0b3b0;
+    --color-form-background: #24333c;
+    --color-text: #fff;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+	background-color: #2F4F4F;
+	color: #F0F8FF;
+	font-family: 'Open Sans', sans-serif;
+}
+#user {
+	background-color: #222D33;
+	padding: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	float: right;
+}
+.buttons {
+	padding: 3px;
+	background-color: #546974;
+	display: grid;
+  	grid-template-columns: 20% 20% 20% 20% 20%;
+  	
+}
+button{
+	padding: 5px;
+}
+#home{
+	width: 95%;
+	position: absolute;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#text1 {
+	display: flex;
+	justify-content: center;
+
+}
+
+#imgHome {
+	margin-top: 50px;
+	display: flex;
+    justify-content: center;
+}
+img {
+	border-radius: 50%;
+}
+
+.container-forms {
+	min-height: 554px;
+	width: 100vw;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	margin-left: auto;
+    margin-right: auto;
+	
+}
+
+.form
+{
+	position: absolute;
+	
+	width: 100%;
+	padding: 30px;
+	border-radius: 6px;
+	background-color: #fff;
+}
+
+#register{
+	position: absolute;
+	background-color: #24333c;
+	padding: 5px;
+	color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 350px;
+	min-width: 300px;
+
+}
+
+#login {
+	position: absolute;
+	background-color: #24333c;
+	padding: 5px;
+	color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 350px;
+	min-width: 300px;
+}
+.container{
+	padding: 5px;
+	
+}
+#label{
+	margin-bottom: 5px;
+}
+
+.signupbtn {
+    padding: 10px;
+    margin-top: 40px;
+    width: 100%;
+    transition: all 0.5s ease;
+    border: 2px solid #3498d8;
+    border-radius: 6px;
+    background-color: #1ab188;
+    cursor: pointer;
+    color: var(--color-text);
+    font-size: 16px;
+}
+
+.signupbtn:focus {
+    background: #179877;
+}
+
+input {
+    width: 100%;
+    padding: 6px;
+    border: 2px solid var(--color-form);
+    background-color: var(--color-form-background);
+    font-size: 15px;
+    color: var(--color-text);
+}
+
+#btn1, #btn2, #btn3, #btn4, #btn5 {
+	padding: 3px;
+	margin-inline: 5px;
+    transition: all 0.5s ease;
+    border: 1px solid #3498d8;
+    border-radius: 6px;
+    background-color: #1ab188;
+    cursor: pointer;
+    color: var(--color-text);
+    font-size: 16px;
+	font-weight: bold;
+}
+
+#btn5{
+	grid-column-start: 5;
+} 
+
+/* charts and table */
+#userLogged {
+	position: relative;
+	width: 95%;
+	padding: 5px;
+	/*margin-top: 10px;*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+/* charts */
+.graphBox {
+	position: relative;
+	width: 100%;
+	padding: 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 20px;
+	max-height: 400px;
+    min-height: 250px;
+}
+.graphBox .box {
+	position: relative;
+	background: #fff;
+	padding: 5px;
+	width: 100%;
+	box-shadow: 0 7px 25px rgb(0, 0, 0, 0.08);
+	border-radius: 20px;
+	max-height: 200px;
+    min-height: 250px;
+}
+
+/* table */
+#tableData{
+	position: relative;
+	/*margin-top: 10px;*/
+	display: flex;
+    justify-content: center;	
+}
+
+.table {
+	margin-top: 10px;
+	display: flex;
+    justify-content: center;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	border-collapse: collapse;
+	overflow: hidden;
+	font-weight: bold;
+	letter-spacing: 1px;
+    font-size: 0.8rem;
+	background-color: #1a5858;
+}
+
+th {
+    background-color: #103838;
+    padding: 10px;
+}
+
+.table td,
+.table th {
+	padding: 10px 20px;
+}
+.span {
+	font-size: 0.8rem;
+}
+
+
+
+
+/*
+#table{
+	margin-top: 10px;
+	display: flex;
+    justify-content: center;
+	
+}
+td,
+th {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 10px;
+}
+
+td {
+    text-align: center;
+	background-color: #fff;
+	color: #222D33;
+}
+
+tr:nth-child(even) {
+    background-color: #eee;
+}
+
+th[scope='col'] {
+    background-color: #696969;
+    color: #fff;
+}
+
+th[scope='row'] {
+    background-color: #9e9ea0;
+}
+
+caption {
+    padding: 10px;
+    caption-side: bottom;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200, 200, 200);
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    font-size: 0.8rem;
+}
+*/ 

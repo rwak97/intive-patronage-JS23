@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Zadanie patronage</title>
+		
+		<link rel="stylesheet" href="./css/style.css" type="text/css">
+		<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+		<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@4.1.2/dist/chart.umd.min.js"></script>
+		<script type="text/javascript">
+		
+
+		</script>
+	</head>
+	<body>
+		<div id="user">No user logged in</div>
+		<div class="buttons">
+			<button id="btn1" onclick="show('home'); hide('login'); hide('register'); hide('userLogged');">Strona domowa</button> 
+			<button id="btn2" onclick="show('register'); hide('btn2'); show('btn3'); hide('login'); hide('home'); hide('userLogged');">Rejestracja</button> 
+			<button id="btn3" onclick="show('login'); hide('btn3'); show('btn2'); hide('register'); hide('home'); hide('userLogged');">Logowanie</button> 
+			<button id="btn4" onclick="show('userLogged'); hide('login'); hide('register'); hide('home');">Zalogowany widok</button> 
+			<button id="btn5" onclick="logout(); show('home'); hide('login'); hide('register'); hide('userLogged');">Wyloguj</button> 
+		</div>
+			
+		<div id="home"><h2>Aplikacja przedstawiająca historię transakcji</h2><br>
+			<div id="text1">
+				Zaloguj się. Nie posiadasz konta? Zarejestruj się!
+			</div>
+			<div id="imgHome">
+				<img src="pictures/historyTransactions.jpg" width=400 height=400 alt="img">
+			</div>
+		</div>
+
+		<div class="container-forms">
+		
+			<div id="register" style="display: none;">
+				<div id="form">
+					<form action="javascript:;" onsubmit="return register(this);">
+						<div class="container">
+							<h1>Rejestracja</h1>
+							
+							<label for="userName"><b>Nazwa użytkownika</b></label><br>
+							<input type="text" id="userName" placeholder="Wprowadź nazwę" name="userName" required>
+							<span id="userNameValidation" class="span"></span><br>
+						
+							<label for="email"><b>Email</b></label><br>
+							<input type="text" id="email" placeholder="Wprowadź email" name="email" required>
+							<span id="emailValidation" class="span"></span><br>
+							
+							<label for="emailRepeat"><b>Powtórz email</b></label><br>
+							<input type="text" id="emailRepeat" placeholder="Powtórz email" name="emailRepeat" required>
+							<span id="emailRepeatValidation" class="span"></span><br>
+
+							<label for="psw"><b>Hasło</b></label><br>
+							<input type="password" id="psw" placeholder="Wprowadź hasło" name="psw" required><br>
+							<span id="pswMessage" class="span"></span>
+
+							<div class="clearfix">
+								<button type="submit" class="signupbtn">Zarejestruj</button>
+							</div>
+						</div>
+					</form> 
+				</div>
+			</div>
+
+			<div id="login" style="display: none;">
+				<div id="form">
+					<form  action="javascript:;" onsubmit="return login(this);">
+						<div class="container">						
+							<h1>Logowanie</h1>					
+							<label for="email_or_userName"><b>Email</b></label><br>
+							<input type="text" placeholder="Wprowadź email" name="email_or_userName" required><br>
+							<span id="loginFormUserName" class="span"></span><br>
+												
+							<label for="psw"><b>Hasło</b></label><br>
+							<input type="password" placeholder="Wprowadź hasło" name="psw" required><br>
+							<span id="loginFormPassword" class="span"></span>				
+							<div class="clearfix">
+								<button type="submit" class="signupbtn">Zaloguj</button>
+							</div>
+						</div>
+					</form> 
+				</div>		
+			</div>
+
+			<!--Add charts-->
+			
+			<div id="userLogged" style="display: none;"><h2>Historia transakcji</h2>
+				<div class="graphBox">
+					<div class="box">
+						<canvas id="pie-chart"></canvas>
+					</div>
+					<div class="box">
+						<canvas id="bar-chart"></canvas>
+					</div>
+				</div>
+
+				<div id="tableData">
+					<table class="table">
+						<!--<thead></thead>-->
+						<tr>
+							<th scope="col">Data</th>
+							<th scope="col">Typ transakcji</th>
+							<th scope="col">Opis</th>
+							<th scope="col">Kwota</th>
+							<th scope="col">Saldo</th>
+						</tr>
+						<tbody></tbody>
+					</table>
+				</div>
+				
+			</div>
+			
+		</div>
+	
+		<script src="./js/main.js"></script>
+		<script src="./js/registration.js"></script>
+		<script src="./js/login.js"></script>
+		<script src="./js/chart.js"></script>
+		<script src="./js/table.js"></script>
+		<script src="./js/scroll.js"></script>
+
+	</body>
+
+</html>
