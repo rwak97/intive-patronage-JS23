@@ -109,12 +109,12 @@ function hashString(string) {
 
 function register (form) {
 	
-	showVerifyEmailResult(form.userName.value);
-	showVerifyUserNameResult(form.emailRepeat.value);
-	showVerifyRepeatEmailResult(form.email.value);
+	showVerifyUserNameResult(form.userName.value);
+	showVerifyEmailResult(form.email.value);
+	showVerifyRepeatEmailResult(form.emailRepeat.value);
 	showVerifyPasswordResult(form.psw.value);
 
-	if (! ( verifyUserName(form.userName.value) || verifyEmail(form.email.value) || verifyRepeatEmail(form.emailRepeat.value) || verifyPassword(form.psw.value) )) {
+	if (! ( verifyUserName(form.userName.value) && verifyEmail(form.email.value) && verifyRepeatEmail(form.emailRepeat.value) && verifyPassword(form.psw.value) )) {
 		return false;
 	} else {
 	
